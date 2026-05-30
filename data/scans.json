@@ -1,0 +1,161 @@
+[
+  {
+    "id": "SCAN-I5HMIKYS9",
+    "target": "cloud-server.local",
+    "scanType": "fast",
+    "portsConfig": "Top 15 Fast",
+    "timestamp": "2026-05-30T08:28:23.729Z",
+    "durationMs": 346,
+    "isSimulated": true,
+    "exposureScore": 100,
+    "riskLevel": "Critical",
+    "ports": [
+      {
+        "port": 21,
+        "protocol": "TCP",
+        "status": "open",
+        "service": "FTP (File Transfer Protocol)",
+        "banner": "220 VSFTPD 3.0.3 - Secure FTP Server connection active.",
+        "severity": "high",
+        "description": "Legacy plaintext transfer protocol. Vulnerable to credential sniffing and man-in-the-middle attacks.",
+        "remediation": "Disable anonymous FTP. Upgrade to SFTP (SSH File Transfer Protocol) using public key authentication."
+      },
+      {
+        "port": 22,
+        "protocol": "TCP",
+        "status": "open",
+        "service": "SSH (Secure Shell)",
+        "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1",
+        "severity": "low",
+        "description": "Secure shell transport channel. Exposes remote command execution interfaces.",
+        "remediation": "Disable password-based logins, require certificate keys, rate limit authentication attempts, and customize default port."
+      },
+      {
+        "port": 23,
+        "protocol": "TCP",
+        "status": "open",
+        "service": "Telnet",
+        "banner": "Telnetd Login Remote Console - Session Ready.",
+        "severity": "critical",
+        "description": "Plaintext terminal protocol. Complete absence of session encryption triggers massive passive capture vulnerabilities.",
+        "remediation": "Immediately decommission Telnet service. Replace with SSH."
+      },
+      {
+        "port": 25,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 53,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 80,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 110,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 143,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 443,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 1433,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 3306,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 5432,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 6379,
+        "protocol": "TCP",
+        "status": "open",
+        "service": "Redis Cache Store",
+        "banner": "Redis key-value server ready (v6.2.6)",
+        "severity": "critical",
+        "description": "NoSQL In-memory caching gateway. Often exposed unauthenticated, allowing arbitrary file retrieval and remote code execution.",
+        "remediation": "Enable authentication (REQUIREPASS parameter), bind only to trusted interfaces, and configure TLS."
+      },
+      {
+        "port": 8080,
+        "protocol": "TCP",
+        "status": "closed",
+        "service": "None",
+        "severity": "info",
+        "description": "Connection actively refused by host operating system (RST pack returned).",
+        "remediation": "No active mitigation required. Ensure default-deny holds valid."
+      },
+      {
+        "port": 27017,
+        "protocol": "TCP",
+        "status": "open",
+        "service": "MongoDB Database",
+        "banner": "MongoDB Server Connection handshake active (v5.0.5)",
+        "severity": "critical",
+        "description": "NoSQL document datastore. Public exposure might lead to unauthenticated database dumps or ransomware attacks.",
+        "remediation": "Configure internal IP binding, enforce robust SCRAM-SHA auth schemas, and use TLS bindings."
+      }
+    ],
+    "summary": {
+      "totalScanned": 15,
+      "openCount": 5,
+      "closedCount": 10,
+      "filteredCount": 0
+    }
+  }
+]
