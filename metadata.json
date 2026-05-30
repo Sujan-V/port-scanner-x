@@ -1,0 +1,6 @@
+{
+  "name": "PortScannerX",
+  "description": "Advanced network reconnaissance and port intelligence platform for ethical cybersecurity analysis, security auditing, and educational demonstrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
