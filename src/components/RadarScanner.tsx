@@ -199,7 +199,7 @@ export default function RadarScanner({
       {/* Absolute Header Overlay */}
       <div className={`absolute top-3 left-4 flex items-center space-x-2 text-xs font-mono tracking-wider ${theme.headerText}`}>
         <Activity className={`w-3.5 h-3.5 ${isScanning ? 'animate-pulse' : ''}`} />
-        <span>RECON_RADAR_MAP_v2</span>
+        <span>RECON RADAR MAP</span>
       </div>
 
       <div className="absolute top-3 right-4">

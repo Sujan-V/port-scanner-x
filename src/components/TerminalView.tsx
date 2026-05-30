@@ -47,7 +47,7 @@ export default function TerminalView({ logs, isScanning, onClear }: TerminalView
         <div className="flex items-center space-x-2">
           <Terminal className="w-4 h-4 text-cyan-400" />
           <span className="font-mono text-xs font-semibold tracking-wider text-slate-200">
-            SECURE_SHELL_LOGGER &bull; PORT_PROBE_SESSION
+            SECURE SHELL LOGGER &bull; PORT PROBE SESSION
           </span>
           {isScanning && <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping inline-block" />}
         </div>
